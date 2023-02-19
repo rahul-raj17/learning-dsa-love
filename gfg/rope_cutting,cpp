@@ -1,0 +1,17 @@
+class Solution{
+    public:
+        vector<int> RopeCutting(int *arr, int n)
+    {
+        // Complete the function
+        vector<int> v;
+        sort(arr,arr+n);
+        int start = 0;
+        int end = n-1;
+        for(int i = start; i < end; i++) {
+            if(arr[i] != arr[i+1]) {
+                v.push_back(n-i-1);
+            }
+        }
+        return v;
+    }
+};
